@@ -1,0 +1,29 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - Camp Rating</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="card">
+            <h2>Admin Dashboard</h2>
+
+            <p><strong>Total Users:</strong> @ViewBag.UserCount</p>
+            <p><strong>Total Camping Sites:</strong> @ViewBag.CampingSiteCount</p>
+            <p><strong>Total Reviews:</strong> @ViewBag.ReviewCount</p>
+
+            <div class="button-group">
+                <a href="/Admin/ManageUsers" class="dashboard-button">Manage Users</a>
+                <a href="/Admin/ManageCampings" class="dashboard-button">Manage Camping Sites</a>
+                <a href="/Admin/ManageReviews" class="dashboard-button">Manage Reviews</a>
+                <a href="/Account/Logout" class="dashboard-button logout-button">Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿@model CampRating.Models.CampingSite
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@(Model.Id == 0 ? "Add New Camping Site" : "Edit Camping Site") - CampRating</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="form-container">
+        <h2>@(Model.Id == 0 ? "Add New Camping Site" : "Edit Camping Site")</h2>
+
+        <form method="post" enctype="multipart/form-data" action="/Admin/SaveCamping/@Model.Id">
+            <input type="hidden" name="Id" value="@Model.Id" />
+
+            <div class="form-group">
+                <label>Name:</label><br />
+                <input type="text" name="Name" value="@Model.Name" required />
+            </div>
+
+            <div class="form-group">
+                <label>Description:</label><br />
+                <textarea name="Description" required>@Model.Description</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Latitude:</label><br />
+                <input type="number" step="any" name="Latitude" value="@Model.Latitude" required />
+            </div>
+
+            <div class="form-group">
+                <label>Longitude:</label><br />
+                <input type="number" step="any" name="Longitude" value="@Model.Longitude" required />
+            </div>
+
+            <div class="form-group">
+                <label>Change Photo (optional):</label><br />
+                <input type="file" name="photo" />
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.PhotoPath))
+            {
+                <div class="form-group">
+                    <label>Current Photo:</label><br />
+                    <img src="@Model.PhotoPath" width="150" style="border-radius: 8px; margin-top: 10px;" />
+                </div>
+            }
+
+            <br />
+            <button type="submit" class="button">Save Changes</button>
+        </form>
+
+        <br />
+        <a href="/Admin/ManageCampings" class="back-link">Back to Manage Campings</a>
+    </div>
+</body>
+</html>

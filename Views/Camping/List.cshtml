@@ -1,0 +1,41 @@
+@model List<CampRating.Models.CampingSite>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camping Sites - Camp Rating</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="camping-list-container">
+        <h2>Camping Sites</h2>
+        <form method="get" action="/Camping/List">
+            <input type="text" name="search" placeholder="Search by name..." />
+            <button type="submit">Search</button>
+        </form>
+
+        <ul>
+        @foreach (var camp in Model)
+        {
+            <li>
+                <h3>@camp.Name</h3>
+                <p>@camp.Description</p>
+                <p>Latitude: @camp.Latitude | Longitude: @camp.Longitude</p>
+                @if(!string.IsNullOrEmpty(camp.PhotoPath))
+                {
+                    <img src="@camp.PhotoPath" width="200" />
+                }
+                <p><a href="/Review/Create?campingSiteId=@camp.Id">Add Review</a></p>
+            </li>
+        }
+        </ul>
+
+        <a href="/Review/MyReviews">My Reviews</a> |
+        <a href="/Account/Logout">Logout</a>
+    </div>
+</body>
+</html>

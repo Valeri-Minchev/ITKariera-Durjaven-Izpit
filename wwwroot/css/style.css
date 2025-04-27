@@ -1,0 +1,366 @@
+﻿/* General page settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+/* LOGIN and REGISTER containers */
+.login-container,
+.register-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Titles */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0077cc;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs, Textareas, and Buttons */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="file"],
+textarea,
+button {
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Textarea specific */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Buttons */
+button,
+.button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+button:hover,
+.button:hover {
+    background-color: #005fa3;
+}
+
+/* Delete button special style */
+.delete-button {
+    background-color: #dc3545; /* Red for delete */
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Error messages */
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Admin Dashboard, Form Containers */
+.dashboard-container,
+.container,
+.camping-list-container,
+.review-create-container,
+.reviews-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Button Groups (Dashboard) */
+.button-group {
+    margin: 20px 0;
+}
+
+.dashboard-button {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.dashboard-button:hover {
+    background-color: #218838;
+}
+
+/* Special logout button */
+.logout-button {
+    background-color: #dc3545; /* Red */
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Form Container (EditCamping, EditUser, Review Creation) */
+.form-container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Form Groups (all forms) */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Save Button (for Edit pages) */
+.button {
+    background-color: #28a745;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+/* Back links */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0077cc;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Table styling */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #0077cc;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #eef6fc;
+}
+
+/* Camping Sites List specific */
+.camping-list-container h2 {
+    color: #0077cc;
+}
+
+.camping-list-container form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.camping-list-container input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.camping-list-container button {
+    background-color: #0077cc;
+    padding: 10px 20px;
+}
+
+.camping-list-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.camping-list-container li {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.camping-list-container li h3 {
+    margin: 0;
+    color: #0077cc;
+}
+
+.camping-list-container li p {
+    margin: 10px 0;
+}
+
+.camping-list-container li img {
+    border-radius: 6px;
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+.camping-list-container a {
+    color: #0077cc;
+    font-weight: bold;
+}
+
+.camping-list-container a:hover {
+    text-decoration: underline;
+}
+
+/* Review Create page specific */
+.review-create-container h2 {
+    color: #0077cc;
+}
+
+.review-create-container form {
+    margin-top: 20px;
+}
+
+.review-create-container textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.review-create-container button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 10px;
+}
+
+.review-create-container button:hover {
+    background-color: #218838;
+}
+
+.review-create-container a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0077cc;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.review-create-container a:hover {
+    text-decoration: underline;
+}
+
+/* My Reviews Page */
+.reviews-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.reviews-container h2 {
+    color: #0077cc;
+}
+
+.reviews-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.reviews-container li {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.reviews-container li a {
+    color: #0077cc;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.reviews-container li a:hover {
+    text-decoration: underline;
+}
+
+.reviews-container a {
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.reviews-container a:hover {
+    text-decoration: underline;
+}

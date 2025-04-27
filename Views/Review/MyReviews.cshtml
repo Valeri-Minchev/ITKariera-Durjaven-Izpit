@@ -1,0 +1,33 @@
+@model List<CampRating.Models.Review>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Reviews - Camp Rating</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="reviews-container">
+        <h2>My Reviews</h2>
+
+        <ul>
+        @foreach (var review in Model)
+        {
+            <li>
+                <strong>@review.CampingSite.Name</strong><br />
+                @review.Content<br />
+                <a href="/Review/Edit?id=@review.Id">Edit</a> |
+                <a href="/Review/Delete?id=@review.Id">Delete</a>
+            </li>
+        }
+        </ul>
+
+        <a href="/Camping/List">Back to Camping Sites</a> |
+        <a href="/Account/Logout">Logout</a>
+    </div>
+</body>
+</html>

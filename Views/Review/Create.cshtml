@@ -1,0 +1,25 @@
+﻿@model CampRating.Models.Review
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Review - Camp Rating</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="review-create-container">
+        <h2>Create Review</h2>
+        <form method="post">
+            <textarea name="Content" placeholder="Write your review..." rows="5" cols="50" required></textarea><br />
+            <input type="hidden" name="CampingSiteId" value="@ViewBag.CampingSiteId" />
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <a href="/Camping/List">Back to Camping Sites</a>
+    </div>
+</body>
+</html>

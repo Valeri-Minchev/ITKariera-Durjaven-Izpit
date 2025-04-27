@@ -1,0 +1,62 @@
+﻿@model List<CampRating.Models.CampingSite>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Campings - CampRating</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Manage Camping Sites</h2>
+
+        <div class="button-group">
+            <a href="/Admin/AddCamping" class="dashboard-button">Add New Camping Site</a>
+        </div>
+
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Photo</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var camping in Model)
+                {
+                    <tr>
+                        <td>@camping.Name</td>
+                        <td>@camping.Description</td>
+                        <td>@camping.Latitude</td>
+                        <td>@camping.Longitude</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(camping.PhotoPath))
+                            {
+                                <img src="@camping.PhotoPath" width="100" />
+                            }
+                            else
+                            {
+                                <span>No Photo</span>
+                            }
+                        </td>
+                        <td>
+                            <a href="/Admin/EditCamping/@camping.Id" class="button">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <br />
+        <a href="/Admin/Dashboard" class="back-link">Back to Dashboard</a>
+    </div>
+</body>
+</html>
